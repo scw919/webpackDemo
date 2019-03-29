@@ -1,0 +1,77 @@
+.en-US .xs-navbar .head-container{
+	font-size: 15px;
+}
+.en-US .xs-navbar .navbar-nav>li>a{
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.en-US .filter-container{
+	font-size: 18px;
+}
+.en-US .slider-box{
+	font-size: 14px;
+}
+.en-US .turns-filter .turns-btn-box{
+	font-size: 14px;
+}
+.en-US  .turns-filter>span{
+	margin-right: 20px;
+	line-height: 35px;
+}
+.en-US .turns-filter .turns-btn-box>.turns-btn{
+	padding: 0 30px 0 20px;
+}
+.en-US .price-sure{
+	font-size: 18px;
+}
+.en-US .xs-navbar .search-box h1>span{
+	font-size: 60px;
+}
+.en-US .xs-navbar .search-box {
+    /*top: 25%;*/
+    /* margin-left: -467px; */
+}
+.en-US .search-control {
+    /*margin-top: 35px;*/
+}
+.en-US .search-box h2 {
+	font-size: 87px;
+}
+.en-US .xs-navbar .search-box h2>span {
+ 	margin: 0 12px;
+    font-size: 44px;
+}
+.en-US .xs-navbar .search-box h1{
+	display: none !important;
+}
+.zh-HK .zh-HK-US,.en-US .zh-HK-US{
+	display: inline;
+}
+.zh-HK .footer .zh-CN, .en-US .footer .zh-CN{
+	display: none !important;
+}
+.zh-HK .ban-cont-img,.en-US .ban-cont-img{
+	display: none;
+}
+.zh-HK .ban-cont-img.HK,.en-US .ban-cont-img.US{
+	display: block;
+}
+.zh-HK img.HK,.en-US img.HK{
+	display: block;
+}
+.zh-HK img.CN,.en-US img.CN{
+	display: none;
+}
+.zh-HK [name='DownloadWhensUpApp'],.en-US [name='DownloadWhensUpApp']{
+	line-height: 1
+}
+.zh-HK .loadBtnBox>a:nth-child(2),.en-US .loadBtnBox>a:nth-child(2){
+	display: none !important;
+}
+.zh-HK .loadBtnBox,.en-US .loadBtnBox{
+	padding-bottom: 12px;
+	padding-top: 12px;
+}
+.zh-HK .loadBtnBox>a,.en-US .loadBtnBox>a{
+	margin: 10px 0 !important;
+}

@@ -1,0 +1,18 @@
+<div class="row lazyLoad">
+	{{if data.length > 0}}
+        {{each data value ,index}}
+			{{if index < 8}}
+				<div class="col-lg-3 col-md-3 col-ms-4 col-sm-6 col-xs-12">
+					<a href="javascript:void(0)" target="_blank">
+						{{include '../common/cardindex.art' value}}
+					</a>
+				</div>
+			{{/if}}
+        {{/each}}
+	{{/if}}
+	{{if data.length >= 8}}
+		<div class="ft-lt more-btn-div ft-14">
+			<span class="moreActBtn"><span class="i18n" name="viewMore"></span> <i class="fa fa-angle-right"></i></span>
+		</div>
+	{{/if}}
+</div>

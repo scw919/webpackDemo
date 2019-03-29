@@ -1,0 +1,37 @@
+<div class="slide hike-list act-card" data-url="{{id}}">
+	<dl>
+		<dt>
+			<img class="poster" data-original="{{poster_url}}">
+			<span class="bookTime ft-12">{{advance_booking}}</span>
+		</dt>
+		<dd class="tit ft-16" title="{{title}}">
+			{{title}}
+		</dd>
+		{{if sale_price==0||sale_price==undefined}}
+		<dd>
+			<div class="i18n" name="SoldOut"></div>
+		</dd>
+		{{else}}
+		<dd>
+			<div>
+				{{if web_price-sale_price>0}}
+				<div>
+					{{if currency=='HK'}}
+						<span class="money price-old ft-14">HK${{web_price}}</span>
+					{{else if currency=='rmb'}}
+						<span class="money price-old ft-14">￥{{web_price}}</span>
+					{{/if}}
+				</div>
+				{{/if}}
+				<div>
+					{{if currency=='HK'}}
+						<span class="money">HK${{sale_price}}</span>
+					{{else if currency=='rmb'}}
+						<span class="money">￥{{sale_price}}</span>
+					{{/if}}
+				</div>
+			</div>
+		</dd>
+		{{/if}}
+	</dl>		
+</div>

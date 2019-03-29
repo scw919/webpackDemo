@@ -1,0 +1,8 @@
+{{if data.length>0}}
+		{{each data item}}
+		<div>
+			<p>{{item.name}}</p>
+			{{@item.value}}
+		</div>
+	{{/each}}
+{{/if}}

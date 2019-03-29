@@ -1,0 +1,50 @@
+<div class="swiper-wrapper lazyLoad">
+	{{if data.length > 0}}
+        {{each data value ,index}}
+			{{if index>'-1'}}
+				<div class="hot-list act-card swiper-slide" data-url="{{value.id}}">
+					<a href="javascript:void(0)" target="_blank">
+						<dl>
+							<dt>
+								<img class="poster" src="{{value.poster_url}}">
+								<span class="bookTime ft-12">{{value.advance_booking}}</span>
+							</dt>
+							<dd class="tit" title="{{value.title}}">
+								{{value.title}}
+							</dd>
+							{{if value.true_amount==0||value.true_amount==undefined}}
+							<dd>
+								<div class="i18n" name="SoldOut"></div>
+							</dd>
+							{{else}}
+							<dd>
+								<div>
+									{{if value.web_price-value.true_amount>0}}
+									<div>
+										{{if value.true_currency=='HK'}}
+											<span class="money price-old ft-14">HK${{value.web_price}}</span>
+										{{else if value.true_currency=='rmb'}}
+											<span class="money price-old ft-14">￥{{value.web_price}}</span>
+										{{/if}}
+									</div>
+									{{/if}}
+									<div>
+										{{if value.true_currency=='HK'}}
+											<span class="money">HK${{value.true_amount}}</span>
+										{{else if value.true_currency=='rmb'}}
+											<span class="money">￥{{value.true_amount}}</span>
+										{{/if}}
+									</div>
+								</div>
+							</dd>
+							{{/if}}
+						</dl>	
+					</a>
+				</div>
+			{{/if}}
+        {{/each}}
+	{{/if}}
+</div>
+<div class="swiper-button-next hidden-xs hidden-sm"></div>
+<div class="swiper-button-prev hidden-xs hidden-sm"></div>
+<div class="swiper-scrollbar hidden-sm  hidden-md  hidden-lg"></div>

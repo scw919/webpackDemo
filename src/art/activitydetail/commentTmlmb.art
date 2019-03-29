@@ -1,0 +1,25 @@
+{{if data.length>0}}
+	{{each data item,index}}
+	{{if index < 1}}
+		<div class="lastest-comment content hidden-lg hidden-md">
+			<p class="clearfix">
+				{{if item.profile_pic_url}}
+	            	<img class="circleRadio" src="{{item.profile_pic_url}}" alt="">
+	            {{else}}
+	            	<span class="avator"></span>
+	            {{/if}}
+				<span class="com-name ft-16">{{item.nickname}}</span>
+				<span class="com-time ft-16">{{item.created_at}}</span>
+			</p>
+			<div id="comContainer" class="comment-container">
+				<p>{{item.content}}</p>
+			</div>
+		</div>
+	{{/if}}
+	{{/each}}
+{{else}}
+	{{extend '../common/nodata.art'}}
+	{{block 'text'}}
+		<p class="i18n" name="NoReview"></p>
+	{{/block}}
+{{/if}}

@@ -1,0 +1,95 @@
+<div class="xs-container border">
+	<div class="container">
+		<div class="row pay-box" >
+			<div class="i18n" name="SupportPayment">支持支付方式：</div>
+			<div class="payIcon payIcon-pp"></div>
+			<div class="payIcon payIcon-ap"></div>
+			<div class="payIcon payIcon-wx"></div>
+		</div>
+		<div class="row">	
+			
+		</div>
+	</div>
+</div>
+<div class="xs-container">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2 col-sm-6">
+				<div class="part-tit relative i18n" name="WhensUp">行书WhensUp</div>
+				<ul class="part-list">
+					<li><a class="i18n" name="AboutUs" href="http://192.168.1.130:5656/view/aboutus.html" target="_blank">关于我们</a></li>
+					<li><a class="i18n notOpenedNotice" name="Information" href="javascript:void(0)" target="_blank">行书资讯</a></li>
+					<!-- <li><a class="i18n notOpend" name="JoinUs" onclick="notOpenedNotice()" href="javascript:void(0)" target="_blank" >加入我们</a></li> -->
+				</ul>
+			</div>
+			<div class="col-md-1 hidden-xs"></div>
+			<div class="col-md-2 col-sm-6">
+				<div class="part-tit relative i18n" name="HandWhensUp">携手行书</div>
+				<ul class="part-list">
+					<li><a class="i18n" name="MerchantLanding" href="https://www.whensup.com/biz/events" target="_blank">商户登陆</a></li>
+					<li><a class="i18n" name="LetterOfAssociation" href="http://192.168.1.130:5656/view/contactus.html" target="_blank">联系行书</a></li>
+					<!-- <li><a class="i18n notOPend" name="BusinessCooperation" onclick="notOpenedNotice()" href="javascript:void(0)" target="_blank">商务合作</a></li> -->
+				</ul>
+			</div>
+			<div class="col-md-1 hidden-xs"></div>
+			<div class="col-md-2 col-sm-6">
+				<div class="part-tit relative i18n" name="LetterService">行书服务</div>
+				<ul class="part-list"> 
+					<li><a class="i18n notOPend" name="TermsOfService" href="http://192.168.1.130:5656/view/termsofservice.html" target="_blank">服务条款</a></li>
+					<li><a class="i18n notOPend" name="PrivacyPolicy" href="http://192.168.1.130:5656/view/privacyagreement.html" target="_blank">隐私协议</a></li>
+				</ul>
+			</div>
+			<div class="col-md-1 hidden-xs"></div>
+			<div class="col-md-3 col-sm-6">
+				<div id="loadBtnBox" class="lan-choose relative pointer choose-box" style="">
+					<p class="i18n cur-val" name="DownloadWhensUpApp" style="">下载App</p>
+					<span class="sel-arrow"></span>
+				    <ul class="pop-sel-box download" id="language">	
+				    	<li>
+				    		<a href="https://itunes.apple.com/cn/app/whensup/id1359771802?ls=1&mt=8" target="_blank">
+				    			<img src="../../image/app-store-badge.svg">
+				    		</a>
+				    	</li>
+				    	
+				    	<li>
+				    		<a href="https://sj.qq.com/myapp/detail.htm?apkName=com.whensupapp" target="_blank">
+				    			<img src="../../image/android.png">
+				    		</a>
+				    	</li>
+
+				    	<li>
+				    		<a href="https://play.google.com/store/apps/details?id=com.whensupapp" target="_blank">
+				    			<img src="../../image/google-play-badge.svg">
+				    		</a>
+				    	</li>
+				    </ul>
+				</div>
+			</div>
+		</div>
+		<div class="row foot-last">
+			<div class="col-md-9">
+				<div class="copyright fl-lt">
+					<img class="hidden-xs" src="../../image/logo.png">
+				</div>
+				<div class="copyright">
+					<span class="zh-HK-US">© 2017-2019 WhensUp Limited. All Rights Reserved.</span>
+					<span class="zh-CN">版权所有 © 2017-2019 WhensUp Limited</span>
+					<span class="zh-CN"><a href="http://www.miibeian.gov.cn/">粤ICP备18015447号</a></span>
+					<span class="zh-CN"><a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030502002616">粤公网安备44030502002616</a></span>
+					<span class="i18n" name="xsHotLine">行书热线：国内 4008-835-580  香港 +852 2381 9288</span>
+					<span id="license-btn-a" class="license">
+						<a href="javascript:void(0)" class="i18n" name="license">营业执照</a>
+					</span>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="share">
+					<a href="mailto:info@whensup.com" target="_blank"><span class="share-icon wb fa fa-envelope-o"></span></a>
+					<a href="https://www.facebook.com/WhensUp/" target="_blank"><span class="share-icon wx fa fa-facebook-square"></span></a>
+					<a href="https://www.instagram.com/whensupapp/?hl=en" target="_blank"><span class="share-icon ls fa fa-instagram"></span></a>
+					<a href="https://www.weibo.com/u/5079355934?refer_flag=1001030201_&is_hot=1" target="_blank"><span class="share-icon tu fa fa-weibo"></span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,17 @@
+{{if data.length > 0}}
+    {{each data value}}
+		<div class="slide arround-list swiper-slide city-card" data-id="{{value.city_id}}" data-name="{{value.name}}" data-imgurl="{{value.image_url}}" data-type="city"">
+			<dl>
+				<dt>
+					<img class="poster" src="{{value.image_url}}">
+					<p class="tips">
+						<span class="place ft-20">
+							<i class="icon"></i>
+							{{value.name}}
+						</span>
+					</p>
+				</dt>
+			</dl>		
+		</div>
+	{{/each}}
+{{/if}}

@@ -1,0 +1,29 @@
+{{if data.length>0}}
+	{{each data item}}
+	<div class="comment-card clearfix">
+	    <div class="comment-card-user">
+	        <div class="comment-card-user-vatar">
+	            {{if item.profile_pic_url}}
+	            	<img class="circleRadio" src="{{item.profile_pic_url}}" alt="">
+	            {{else}}
+	            	<span class="avator"></span>
+	            {{/if}}
+	        </div>
+            <div class="comment-card-user-name ellipsis">{{item.nickname}}</div>
+	    </div>
+	    <div class="comment-card-content ">
+	        <div class="comment-card-product">
+                <div class="comment-card-text">{{item.content}}</div>
+                <div class="comment-card-datetime">
+                    {{item.created_at}}
+                </div>
+	    	</div>  
+		</div>
+	</div>
+	{{/each}}
+{{else}}
+	{{extend '../common/nodata.art'}}
+	{{block 'text'}}
+		<p class="i18n" name="NoReview"></p>
+	{{/block}}
+{{/if}}

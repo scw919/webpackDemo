@@ -1,0 +1,3 @@
+<span class="start-time">{{start_datetime}}</span> 
+<span class="i18n" name="To"></span> 
+<span class="end-time"> {{end_datetime}}</span>

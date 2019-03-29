@@ -1,0 +1,94 @@
+{{if data.length>0}}
+	{{each data types}}
+	{{if types.types.length>0}}
+		<div class="ticket-kinds ticket-special">
+			<div class="ticket-kinds-tit tit-p gray pointer ft-16" onclick="detail.dropdownticktList(this)">
+				<span class="">{{types.name.name | filterLang}}</span>
+				<span class="dropdown-icon active"></span>
+			</div>						
+			<div class="ticket-kinds-box">
+				{{if types.types.length>0}}
+			 		{{each types.types item}}
+						<div class="ticket-item ft-14  hidden-xs">
+							<div class="ticket-item-box clearfix">
+								<div class="flex">
+									<div class="ticket-item-tit pointer ellipsis" title="{{item.product_name}}" onclick="detail.showDetails(this)">
+										{{item.product_name}}
+									</div>
+									<span class="i18n" name="BookingDetails">预订须知</span>
+									<span class="light-icon pointer" onclick="detail.showDetails(this)"></span>
+								</div>
+								<div class="book-div flex">
+									<div class="flex">
+										<div class="time-limit blueStyle">
+											{{item.advance_booking}}
+										</div>
+										<span class="ft-22 price-new mar-r-5">
+											{{if item.currency=='HK'}}
+												<span>HK${{item.sale_price}}</span>
+											{{else if item.currency=='rmb'}}
+												<span>￥{{item.sale_price}}</span>
+											{{/if}}
+										</span>
+										{{if item.web_price-item.sale_price>0}}
+										<span class="ft-14 price-old">
+											{{if item.currency=='HK'}}
+												<span>HK${{item.web_price}}</span>
+											{{else if item.currency=='rmb'}}
+												<span>￥{{item.web_price}}</span>
+											{{/if}}
+										</span>
+										{{/if}}
+									</div>
+									<button class="book-ticket xs-blue-btn ft-14 border-4 i18n" data-id="{{product_id}}" name="Booking" onclick="detail.bookbills()">预订</button>
+								</div>
+							</div>
+							<div class="dropdown-box" style="display: none">
+								<div class="det-info-box">
+									<div class="det-info-cont ft-14 bold">{{item.product_name}}</div>											
+								</div>
+								{{if item.scenic_type!=5&&item.scenic_type!=6}}
+								<div class="det-info-box">
+									<div class="det-info-tit ft-14 i18n" name="Admission">入园方式:</div>
+									{{if item.admission_voucher!=null&&item.admission_voucher!='null'&&item.admission_voucher!=''}}
+									<div class="det-info-cont ft-14">{{item | getAdmissionVoucherDesc}}</div>	
+									{{else}}
+									<div class="det-info-cont ft-14">
+										<span class="i18n" name="NotApplicable"></span>
+									</div>	
+									{{/if}}
+								</div>
+								{{/if}}
+								<div class="det-info-box">
+									<div class="det-info-tit ft-14 i18n" name="BookingDetails">预订须知:</div>
+									{{if item.book_notice}}
+									<div>
+										{{@item.book_notice | filterEnter}}
+									</div>	
+									{{else}}
+									<div class="det-info-cont ft-14">
+										<span class="i18n" name="NotApplicable"></span>
+									</div>			
+									{{/if}}
+								</div>
+								<div class="det-info-box">
+									<div class="det-info-tit ft-14 i18n" name="Others">其他说明:</div>
+									{{if item.info}}
+									<div class="det-info-cont ft-14">
+										{{@item.info | filterEnter}}
+									</div>	
+									{{else}}
+									<div class="det-info-cont ft-14">
+										<span class="i18n" name="NotApplicable"></span>
+									</div>	
+									{{/if}}
+								</div>
+							</div>
+						</div>
+					{{/each}}
+			 	{{/if}}
+			</div>
+		</div>
+	{{/if}}
+	{{/each}}
+{{/if}}

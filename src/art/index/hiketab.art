@@ -1,0 +1,11 @@
+{{each data value,index}}
+	{{if index == 0}}
+		<div class="tab-item active" data-moduleId="{{value.activity_city_list[0].city_id}}"> 
+			<a class="ft-14" onclick="return false;" href="javascript:void(0)">{{value.city_name}}</a>
+		</div>
+	{{else}}
+		<div class="tab-item" data-moduleId="{{value.activity_city_list[0].city_id}}"> 
+			<a class="ft-14" onclick="return false;" href="javascript:void(0)">{{value.city_name}}</a>
+		</div>
+	{{/if}}
+{{/each}}

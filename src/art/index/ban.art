@@ -1,0 +1,7 @@
+{{if data.length > 0}}
+    {{each data value}}
+		<div class="slide swiper-slide lazyLoad">
+			<img class="poster" src="{{value.background_url}}">
+		</div>
+    {{/each}}
+{{/if}}

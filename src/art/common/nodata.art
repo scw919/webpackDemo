@@ -1,0 +1,4 @@
+<div class="noData">
+	<img src="../../image/content/list-null-pic.png"/>
+	{{block 'text'}}{{/block}}
+</div>

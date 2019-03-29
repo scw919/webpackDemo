@@ -1,0 +1,33 @@
+<div class="addressMap addressMap-pc">
+	{{if scenic_type!=5&&scenic_type!=6}}
+    	<header class="mar-b-10">
+    		<p class="ft-16 tit i18n mar-b-10" name="Address"></p>
+			<p class="ft-16 adr mar-b-10">{{detail_address}}</p>
+    	</header>
+    	<div id="content_map" class="relative" style="width: 100%;height: 400px;">
+		</div>
+		{{if traffic_bus!=''&&traffic_bus!=null}}
+		<footer class="mar-t-10">
+			<div class="mar-b-10">
+				<span class="ft-16 tit i18n" name="TransportationandLocationMap">推荐线路</span>
+			</div>
+			<div class="ft_traffic ft-16">
+				{{@traffic_bus}}
+			</div>
+		</footer>
+		{{/if}}
+	{{else}}
+		<div class="mar-b-10">
+			<span class="ft-16 tit i18n" name="TransportationandLocationMap">推荐线路</span>
+		</div>
+		{{if traffic_bus!=''&&traffic_bus!=null}}
+		<div class="ft_traffic ft-16">
+			{{@traffic_bus}}
+		</div>
+		{{else}}
+		<div class="ft_traffic ft-16">
+			<span class="i18n" name="NotApplicable"></span>
+		</div>
+		{{/if}}
+	{{/if}}
+</div>

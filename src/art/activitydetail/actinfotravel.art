@@ -1,0 +1,38 @@
+<div class="container">
+	<div class="row">
+		<div class="col-ms-7 col-md-7" style="">
+			<p class="ft-20 act-tit">{{name||title}}</p>
+		</div>
+		{{if ticket_types!=''&&ticket_types!=null}}
+		<div class="col-ms-5 col-md-5 col-padding-1-5 rt-fix-book relative hidden-sm hidden-xs">
+			<div class="price_fix absolute">
+				<div class="p_f_price flex">
+					<span class="price-new ft-22 mar-r-10">
+						{{if ticket_types[0]['types'][0].currency=='HK'}}
+							<span>HK${{ticket_types[0]['types'][0].sale_price}}</span>
+						{{else if ticket_types[0]['types'][0].currency=='rmb'}}
+							<span>￥{{ticket_types[0]['types'][0].sale_price}}</span>
+						{{/if}}
+					</span>
+					{{if ticket_types[0]['types'][0].web_price-ticket_types[0]['types'][0].sale_price>0}}
+					<span class="ft-14 price-old">
+						{{if ticket_types[0]['types'][0].currency=='HK'}}
+							<span>HK${{ticket_types[0]['types'][0].web_price}}</span>
+						{{else if ticket_types[0]['types'][0].currency=='rmb'}}
+							<span>￥{{ticket_types[0]['types'][0].web_price}}</span>
+						{{/if}}
+					</span>
+					{{/if}}
+				</div>
+				<div class="flex align-center">
+					<span class="icon timer"></span>
+					<span>{{ticket_types[0]['types'][0].advance_booking}}</span>
+				</div>
+				<button class="goto_book xs-blue-btn radius-4">
+					<span class="ft-16 i18n" name="immediateBooking"></span>
+				</button>
+			</div>
+		</div>
+		{{/if}}
+	</div>
+</div>

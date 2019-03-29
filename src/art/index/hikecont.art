@@ -1,0 +1,109 @@
+{{each data item ,index}}
+	{{if index == 0}}
+	<div class="row  lazyLoad tab-cont">
+		{{each item.activity_city_list value ,index2}}
+			{{if index2 < 8}}
+				<div class="col-lg-3 col-md-3 col-ms-4 col-sm-4 col-xs-12">
+					<a href="javascript:void(0)" target="_blank">
+						<div class="slide hike-list act-card" data-url="{{value.id}}">
+							<dl>
+								<dt>
+									<img class="poster" data-original="{{value.poster_url}}">
+									<span class="bookTime ft-12">{{value.advance_booking}}</span>
+								</dt>
+								<dd class="tit ft-16" title="{{value.title}}">
+									{{value.title}}
+								</dd>
+								{{if value.true_amount==0||value.true_amount==undefined}}
+								<dd>
+									<div class="i18n" name="SoldOut"></div>
+								</dd>
+								{{else}}
+								<dd>
+									<div>
+										{{if value.web_price-value.true_amount>0}}
+										<div>
+											{{if value.true_currency=='HK'}}
+												<span class="money price-old ft-14">HK${{value.web_price}}</span>
+											{{else if value.true_currency=='rmb'}}
+												<span class="money price-old ft-14">￥{{value.web_price}}</span>
+											{{/if}}
+										</div>
+										{{/if}}
+										<div>
+											{{if value.true_currency=='HK'}}
+												<span class="money">HK${{value.true_amount}}</span>
+											{{else if value.true_currency=='rmb'}}
+												<span class="money">￥{{value.true_amount}}</span>
+											{{/if}}
+										</div>
+									</div>
+								</dd>
+								{{/if}}
+							</dl>		
+						</div>
+					</a>
+				</div>
+			{{/if}}
+		{{/each}}
+		{{if item.activity_city_list.length>=6}}
+			<div class="ft-lt more-btn-div ft-14">
+				<span class="moreActBtn"><span class="i18n" name="viewMore"></span> <i class="fa fa-angle-right"></i></span>
+			</div>
+		{{/if}}
+	</div>
+	{{else}}
+	<div class="row  lazyLoad tab-cont xs-hidden">
+		{{each item.activity_city_list value ,index2}}
+			{{if index2 < 8}}
+				<div class="col-lg-3 col-md-3 col-ms-4 col-sm-4 col-xs-12">
+					<a href="javascript:void(0)" target="_blank">
+						<div class="slide hike-list act-card" data-url="{{value.id}}">
+							<dl>
+								<dt>
+									<img class="poster" data-original="{{value.poster_url}}">
+									<span class="bookTime ft-12">{{value.advance_booking}}</span>
+								</dt>
+								<dd class="tit ft-16" title="{{value.title}}">
+									{{value.title}}
+								</dd>
+								{{if value.true_amount==0||value.true_amount==undefined}}
+								<dd>
+									<div class="i18n" name="SoldOut"></div>
+								</dd>
+								{{else}}
+								<dd>
+									<div>
+										{{if value.web_price-value.true_amount>0}}
+										<div>
+											{{if value.true_currency=='HK'}}
+												<span class="money price-old ft-14">HK${{value.web_price}}</span>
+											{{else if value.true_currency=='rmb'}}
+												<span class="money price-old ft-14">￥{{value.web_price}}</span>
+											{{/if}}
+										</div>
+										{{/if}}
+										<div>
+											{{if value.true_currency=='HK'}}
+												<span class="money">HK${{value.true_amount}}</span>
+											{{else if value.true_currency=='rmb'}}
+												<span class="money">￥{{value.true_amount}}</span>
+											{{/if}}
+										</div>
+									</div>
+								</dd>
+								{{/if}}
+							</dl>		
+						</div>
+					</a>
+				</div>
+			{{/if}}
+		{{/each}}
+		{{if item.activity_city_list.length>=8}}
+			<div class="ft-lt more-btn-div ft-14">
+				<span class="moreActBtn"><span class="i18n" name="viewMore"></span> <i class="fa fa-angle-right"></i></span>
+			</div>
+		{{/if}}
+	</div>
+	{{/if}}
+{{/each}}

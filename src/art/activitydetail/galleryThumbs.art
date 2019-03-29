@@ -1,0 +1,3 @@
+{{each data item}}
+	<div class="swiper-slide" style="background-image:url({{item}})"></div>
+{{/each}}
