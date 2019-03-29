@@ -20,6 +20,7 @@ import {
     getCookie,
     execI18n
 } from './common/c_utils.js';
+import headtpl from '../art/common/header.art';
 import foottpl from '../art/common/foot.art';
 import layer from './layer/layer.js';
 var isDetail = $('.detail-body').length>0;
@@ -224,6 +225,7 @@ var headLogoLoad=function(){
 
 // document.ready
 var onloadFUN = function(){
+	$('.head-container').html(headtpl);
 	$('footer.footer').html(foottpl);
 	$(function(){
 	window.onunload = function(){

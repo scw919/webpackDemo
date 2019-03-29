@@ -157,12 +157,6 @@ var filterActivityIndex=function(data){
             curCity.activity_city_list=newCityArr;
         })(i);                                                            
     }                                            
-    /*for(var k = 0;k<initData.length;k++){
-        if(initData[k]['activity_city_list'][0]==undefined){
-            delete initData[k];
-            // initData.splice(k,1);
-        }
-    }*/
     var newArr=[];  
     for(var j=0;j<initData.length;j++){
         var curCity = initData[j];
